@@ -4,66 +4,45 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Neon Colors */
-  --color-neon-cyan: #00f3ff;
-  --color-neon-blue: #0055ff;
-  --color-neon-purple: #b026ff;
-  --color-neon-pink: #ff00c8;
-
-  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --animate-float: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  /* Accent Colors */
+  --color-accent-blue: #3b82f6;
+  --color-accent-indigo: #6366f1;
+  --color-accent-emerald: #10b981;
+  --color-accent-slate: #94a3b8;
 }
 
 :root {
-  --background: #030305;
-  --foreground: #ffffff;
+  --background: #0a0f1a;
+  --foreground: #f1f5f9;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   overflow-x: hidden;
-  font-family: var(--font-inter), sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   scroll-behavior: smooth;
 }
 
 /* Glassmorphism utility */
 @utility glass {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 @utility glass-hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
-@utility text-glow {
-  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-@utility box-glow {
-  box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
-}
-
-@utility hover-shake {
-  transition: transform 0.2s;
-  &:hover {
-    animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
-  }
-}
-
-@keyframes shake {
-  10%, 90% { transform: translate3d(-1px, 0, 0); }
-  20%, 80% { transform: translate3d(2px, 0, 0); }
-  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
-  40%, 60% { transform: translate3d(4px, 0, 0); }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
 }

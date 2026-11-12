@@ -1,36 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prakhar Maitreya Parashar — Developer Portfolio
+
+> A modern, professional software engineering portfolio built with Next.js, React, and Tailwind CSS.
+
+🌐 **Live:** [portfolio-prakhar-maitreya-parashar.vercel.app](https://portfolio-prakhar-maitreya-parashar.vercel.app)
+💻 **Repository:** [github.com/Prakhar-Maitreya/Portfolio](https://github.com/Prakhar-Maitreya/Portfolio)
+
+---
+
+## Overview
+
+This is the personal developer portfolio of **Prakhar Maitreya Parashar**, a Computer Science undergraduate at Lovely Professional University (2023–2027). The portfolio presents my experience, projects, skills and certifications relevant to a Software Engineering internship, with a focus on backend development, Java/Spring Boot, Python/Django, REST APIs and developer tooling.
+
+---
+
+## Technology Stack
+
+| Category        | Technologies                              |
+|-----------------|------------------------------------------|
+| Framework       | Next.js 16 (App Router)                  |
+| UI Library      | React 19                                 |
+| Language        | JavaScript (ES6+)                        |
+| Styling         | Tailwind CSS v4                          |
+| Animations      | Framer Motion                            |
+| Icons           | Lucide React                             |
+| Deployment      | Vercel (connected to GitHub main branch) |
+
+---
+
+## Features
+
+- **Hero Section** — Name, role typewriter, CTA buttons (View Projects, Contact Me, Download CV), social links
+- **About** — Education at LPU, CGPA, prior schooling, career objective
+- **Technical Skills** — Programming Languages, Frameworks & Technologies, Developer Tools, Core Concepts
+- **Featured Projects** — Library Management REST API (Java/Spring Boot) and Employee Management System (Python/Django)
+- **Training & Experience** — CipherSchools Full Stack Development Training with clear context
+- **Certifications** — Three verified certifications from CipherSchools and Coursera
+- **Contact** — Social links + contact form (opens mail client with pre-filled message)
+- **Footer** — Social links, branding and copyright
+- **Responsive** — Mobile, tablet and desktop layouts
+- **SEO** — Page metadata, Open Graph tags, semantic HTML
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css        # Tailwind v4 theme + global styles
+│   ├── layout.js          # Root layout (metadata, fonts, Navbar)
+│   └── page.js            # Home page (section composition)
+├── components/
+│   ├── Navbar.js          # Fixed top navigation with active-section tracking
+│   ├── Footer.js          # Footer with social links
+│   ├── sections/
+│   │   ├── Hero.js
+│   │   ├── About.js
+│   │   ├── Skills.js
+│   │   ├── Projects.js
+│   │   ├── Experience.js
+│   │   ├── Certifications.js
+│   │   └── Contact.js
+│   └── ui/
+│       ├── Button.js
+│       ├── SectionWrapper.js
+│       ├── AnimatedCard.js
+│       └── Toast.js
+public/
+└── assets/
+    ├── pfp.jpg                          # Profile photo
+    ├── PrakharMaitreyaParasharCV.pdf    # CV (download link target)
+    └── project-employee.jpg             # Employee portal screenshot
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js v18+ (v22 recommended)
+- npm
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## CV File
 
-## Deploy on Vercel
+The CV download button links to `/public/assets/PrakharMaitreyaParasharCV.pdf`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Place your CV PDF at:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+public/assets/PrakharMaitreyaParasharCV.pdf
+```
+
+The file is already present in the repository.
+
+---
+
+## Deployment (Vercel)
+
+This project is deployed on **Vercel**, connected to the `main` branch of the GitHub repository.
+
+- Every push to `main` triggers an automatic deployment.
+- No environment variables are required for the current configuration.
+- The build command is `next build`; the output directory is handled automatically by Vercel.
+
+To deploy manually via Vercel CLI:
+
+```bash
+npx vercel --prod
+```
+
+---
+
+## Content Accuracy
+
+All content in this portfolio — projects, skills, certifications, training experience and personal information — reflects accurately verified information from the developer's CV. No claims are fabricated or inflated.
+
+---
+
+## License
+
+This project is personal and not licensed for reuse. Please do not use it as a template without permission.
